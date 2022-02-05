@@ -8,6 +8,7 @@ import { QuoteDisplayComponent } from './quote-display/quote-display.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { QuoteHighlightDirective } from './quote-highlight.directive';
 import { TimelapsePipe } from './timelapse.pipe';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TimelapsePipe } from './timelapse.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
