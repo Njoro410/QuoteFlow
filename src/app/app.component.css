@@ -8,3 +8,33 @@
 .nav-link:hover {
     color: aqua;
 }
+#name {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #4093a4;
+    text-decoration: none;
+}
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    font-family: 'Lobster', cursive;
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+p img {
+    width: 22vh;
+}
+#CTO {
+    text-align: center;
+}
