@@ -7,6 +7,7 @@ import { FormInputComponent } from './form-input/form-input.component';
 import { QuoteDisplayComponent } from './quote-display/quote-display.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { QuoteHighlightDirective } from './quote-highlight.directive';
+import { TimelapsePipe } from './timelapse.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { QuoteHighlightDirective } from './quote-highlight.directive';
     FormInputComponent,
     QuoteDisplayComponent,
     QuoteDetailsComponent,
-    QuoteHighlightDirective
+    QuoteHighlightDirective,
+    TimelapsePipe
   ],
   imports: [
     BrowserModule,
