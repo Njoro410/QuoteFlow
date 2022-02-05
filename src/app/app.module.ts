@@ -10,6 +10,7 @@ import { QuoteHighlightDirective } from './quote-highlight.directive';
 import { TimelapsePipe } from './timelapse.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

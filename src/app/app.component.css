@@ -51,3 +51,6 @@ p img {
     background-color: #78d9ec;
     
 }
+mat-dialog-container {
+    background: #eee !important;
+ }

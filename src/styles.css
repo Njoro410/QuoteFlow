@@ -10,3 +10,6 @@ body {
     font-family: 'Berkshire Swash', cursive; 
     overflow-x: hidden;
     }
+    mat-dialog-container {
+        background: #444 !important;
+     }
