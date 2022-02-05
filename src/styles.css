@@ -4,9 +4,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-body {
-    overflow-x: hidden;
-    font-family: 'Berkshire Swash', cursive;
-}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: 'Berkshire Swash', cursive; 
+    overflow-x: hidden;
+    }

@@ -38,3 +38,16 @@ p img {
 #CTO {
     text-align: center;
 }
+#btnq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sendQuote {
+    background-color: #4093a4;
+    width: 25%;
+}
+#sendQuote:hover {
+    background-color: #78d9ec;
+    
+}
