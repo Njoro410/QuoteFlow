@@ -1,0 +1,15 @@
+#quotes {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+ 
+}
+#l {
+    margin-left: -30px;
+    background-color: aquamarine;
+
+}
+#d {
+    margin-left: 10px;
+    background-color: #444;
+}

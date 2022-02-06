@@ -40,15 +40,21 @@
 
 
   <!-- <ul>
-      <li *ngFor='let g of quotes'>
-        {{g.name}}
-      </li>> 
+      <li *ngFor='let q of quotes'>
+        
+      </li>
+      <app-quote-details  [quote]='q'></app-quote-details>
   </ul> -->
 
-  <div *ngFor='let quote of quotes;let i = index'>
+  <div *ngFor='let quote of quotes'>
+    
+  <app-quote-details  [quote]='quote'></app-quote-details>
+</div>
+
+  <!-- <div *ngFor='let quote of quotes;let i = index'>
       <li>{{quote.q}}</li>
     <button (click)='revealQuote(i)'>Toggle Details</button>
     <app-quote-details *ngIf='quote.showQuote' [quote]='quote' (deleteQuote)="remove($event,i)"></app-quote-details>
-  </div>
+  </div> -->
 
 
