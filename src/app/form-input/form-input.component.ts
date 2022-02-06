@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-input',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormInputComponent implements OnInit {
 
-  constructor() { }
+  quoteForm !:FormGroup;
+  constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.quoteForm = this.formBuilder.group({
+      name: ['',Validators.required],
+      author: ['',Validators.required],
+      quote: ['',Validators.required]
+    })
   }
-
+  addQuote() {
+    console.log(this.quoteForm.value)
+  }
 }
+
+
