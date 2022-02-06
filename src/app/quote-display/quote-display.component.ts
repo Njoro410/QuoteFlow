@@ -18,7 +18,20 @@ export class QuoteDisplayComponent implements OnInit {
     });
   }
 
+  quotes: Quote[] = [
+    new Quote('Brian Njoroge','Nelson Mandela','Freedom is a highway'),
+    new Quote('Alex Letto', 'Jomo Kenyatta','We will prevail'),
+  ];
+  
+  revealQuote(index: number | number){
+    this.quotes[index].showQuote = !this.quotes[index].showQuote;
 
+  }
+  remove(deleteQuote: any, index: number) {
+      if(deleteQuote) {
+        this.quotes.splice(index, 1);
+      }
+  }
 
   ngOnInit(): void {
   }

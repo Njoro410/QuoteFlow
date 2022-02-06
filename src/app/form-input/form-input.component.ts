@@ -9,22 +9,19 @@ import { Quote } from '../quote';
 })
 export class FormInputComponent implements OnInit {
 
-  newQuote = new Quote();
-  @Output () addQuote = new EventEmitter<Quote>();
+ 
 
-  submitQuote() {
-    this.addQuote.emit(this.newQuote);
-  }
+
 
   quoteForm !:FormGroup;
   constructor(private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
-    this.quoteForm = this.formBuilder.group({
-      name: ['',Validators.required],
-      author: ['',Validators.required],
-      quote: ['',Validators.required]
-    })
+    // this.quoteForm = this.formBuilder.group({
+    //   name: ['',Validators.required],
+    //   author: ['',Validators.required],
+    //   quote: ['',Validators.required]
+    // })
   }
 
 }

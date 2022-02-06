@@ -10,11 +10,7 @@ import { Quote } from './quote';
 })
 export class AppComponent {
   title = 'QuoteFlow';
-  constructor(private dialog: MatDialog) {}
 
-  openDialog() {
-    this.dialog.open(FormInputComponent, {
-      width:'31.5%',
-    });
-  }
+
+  constructor(){}
 }
