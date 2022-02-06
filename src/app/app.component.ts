@@ -13,7 +13,7 @@ export class AppComponent {
 
   openDialog() {
     this.dialog.open(FormInputComponent, {
-      width:'30%',
+      width:'31.5%',
     });
   }
 }
