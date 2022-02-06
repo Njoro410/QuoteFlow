@@ -6,3 +6,17 @@ mat-form-field {
     width: 100%;
     
 }
+.modal-body, .modal-header, .modal-footer { background-color:#444; }
+#formInputLabel {
+    color: #4093a4;
+    text-align: center;
+}
+.btn {
+    margin-left: 10px;
+}
+#share {
+    background-color: #4093a4;
+}
+#share:hover{
+    background-color: #7cdcf0;
+}

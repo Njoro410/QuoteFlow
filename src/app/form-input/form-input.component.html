@@ -1,21 +1,35 @@
-<h1 mat-dialog-title>Add QuoteFlow</h1>
-<div mat-dialog-content>
-    <form [formGroup]="quoteForm">
-    <mat-form-field appearance="legacy">
-        <mat-label>name</mat-label>
-        <input matInput placeholder="Your Name" formControlName="name">
-    </mat-form-field>
-    <mat-form-field appearance="legacy">
-        <mat-label>author</mat-label>
-        <input matInput placeholder="Quote Author" formControlName="author">
-    </mat-form-field>
-    <mat-form-field appearance="outline">
-        <mat-label>quote</mat-label>
-        <textarea matInput placeholder="enter quote here" formControlName="quote"></textarea>
-    </mat-form-field>
-    <div mat-dialog-actions [align]="'end'">
-        <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
-        <button type="submit" mat-raised-button color="primary" mat-dialog-close>Save</button>
-   </div>
-    </form>
+<!-- Button trigger modal -->
+<button type="button" id="share" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#formInput">
+  Share Quote
+</button>
+<!-- Modal -->
+<div class="modal" id="formInput" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="formInputLabel">Share QuoteFlow</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <mat-form-field appearance="outline">
+            <mat-label>name</mat-label>
+            <input matInput placeholder="Your Name" id="name">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>author</mat-label>
+            <input matInput placeholder="Quote Author" id="author">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>quote</mat-label>
+            <textarea matInput placeholder="enter quote here" id="quote"></textarea>
+          </mat-form-field>
+          <hr>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit"  class="btn btn-primary">Share</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>

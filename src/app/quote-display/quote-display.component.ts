@@ -10,13 +10,9 @@ import { Quote } from '../quote';
 })
 export class QuoteDisplayComponent implements OnInit {
 
-  constructor(private dialog: MatDialog) {}
+  constructor() {}
 
-  openDialog() {
-    this.dialog.open(FormInputComponent, {
-      width:'31.5%',
-    });
-  }
+
 
   quotes: Quote[] = [
     new Quote('Brian Njoroge','Nelson Mandela','Freedom is a highway'),
