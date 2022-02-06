@@ -1,0 +1,53 @@
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.nav-link:hover {
+    color: aqua;
+}
+#name {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: #4093a4;
+    text-decoration: none;
+}
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    font-family: 'Lobster', cursive;
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+p img {
+    width: 22vh;
+}
+#CTO {
+    text-align: center;
+}
+#btnq {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sendQuote {
+    background-color: #4093a4;
+    width: 25%;
+}
+#sendQuote:hover {
+    background-color: #78d9ec;
+    
+}

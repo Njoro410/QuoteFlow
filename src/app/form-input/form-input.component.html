@@ -1,10 +1,11 @@
 <h1 mat-dialog-title>Add QuoteFlow</h1>
 <div mat-dialog-content>
-    <form [formGroup]="quoteForm">
+    <form [formGroup]="quoteForm" #qForm = 'ngForm' (ngSubmit)='submitQuote()'>
     <mat-form-field appearance="legacy">
         <mat-label>name</mat-label>
-        <input matInput placeholder="Your Name" formControlName="name" required>
+        <input matInput placeholder="Your Name" formControlName="name" required [(ngModel)]="newQuote.name" name="name">
     </mat-form-field>
+     {{newQuote.name}}
     <mat-form-field appearance="legacy">
         <mat-label>author</mat-label>
         <input matInput placeholder="Quote Author" formControlName="author">
@@ -13,9 +14,9 @@
         <mat-label>quote</mat-label>
         <textarea matInput placeholder="enter quote here" formControlName="quote"></textarea>
     </mat-form-field>
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+        <button type="submit" mat-raised-button color="primary" mat-dialog-close>Save</button>
+   </div>
     </form>
-</div>
-<div mat-dialog-actions [align]="'end'">
-     <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
-     <button mat-raised-button color="primary" mat-dialog-close (click)="addQuote()">Save</button>
 </div>
