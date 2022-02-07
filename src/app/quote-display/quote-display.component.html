@@ -31,30 +31,89 @@
                 QuoteFlow</p>
         </div>
         <div class="col-sm-12" id="btnq">
-            <app-form-input></app-form-input>
+            <app-form-input (addQuote)="addNewQuote($event)"></app-form-input>
         </div>
     </div>
     <hr>
 </div>
-<app-quote-details></app-quote-details>
 
 
-  <!-- <ul>
-      <li *ngFor='let q of quotes'>
-        
+<!-- <div>
+
+   
+    <ul>
+      <li *ngFor='let quote of quotes'>
+       Posted By: {{quote.name}}<br> {{quote.q}}<br>Author: {{quote.author}}<hr> 
+      This is the author  <app-quote-details [quote]='quote'></app-quote-details>
       </li>
-      <app-quote-details  [quote]='q'></app-quote-details>
-  </ul> -->
-
-  <div *ngFor='let quote of quotes'>
-    
-  <app-quote-details  [quote]='quote'></app-quote-details>
-</div>
-
-  <!-- <div *ngFor='let quote of quotes;let i = index'>
-      <li>{{quote.q}}</li>
-    <button (click)='revealQuote(i)'>Toggle Details</button>
-    <app-quote-details *ngIf='quote.showQuote' [quote]='quote' (deleteQuote)="remove($event,i)"></app-quote-details>
+    </ul>
   </div> -->
+
+
+
+<div class="container">
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor="let quote of quotes let i= index"  style="width: 24rem;"  >
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+                {{quote.category}}
+              </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    {{quote.q}}
+                    
+                    <footer class="blockquote-footer">{{quote.author}}</footer>
+                  </blockquote>
+            </div>
+            <div class="card-footer">
+              <span>Posted by:{{quote.name}}</span>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+        </div>
+
+       
+       
+         <!-- <div class="card-deck">
+            <div *ngFor="let quote of quotes let i= index" class="card" style="width: 24rem;" >
+              <div class="card-body">
+                <h5 class="card-title center">The Quote, posted by:{{quote.name}}</h5>
+                <p class="card-text">{{quote.q}}</p>
+                <app-quote-details [quote]='quote'></app-quote-details>
+              </div>
+              <div class="card-footer">
+                <button type="button" id="boerewors" class="btn btn btn-outline-primary">Add</button>
+              </div>
+            </div>
+          </div>
+          <br>  -->
+
+
+
+
+         
+        <!-- <div class="all-cards">
+            <div *ngFor="let quote of quotes let i= index" class="card" style="width: 24rem;"  >
+              <div class="card-body">
+                <h4 class="card-title" appHighlightQoute >{{quote.name}}<button  class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
+                <p class="card-text" id="param">{{quote.q}}</p>
+                <app-quote-details [quote]='quote'></app-quote-details>
+                <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.name}}</span><span id="date">on: <span id="datecolor"></span></span></span>
+               
+              </div>
+            </div>
+          </div> 
+           -->
+    
+  
+
+
+</div>
 
 

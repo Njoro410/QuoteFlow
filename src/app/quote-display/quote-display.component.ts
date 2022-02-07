@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit,Output,EventEmitter } from '@angular/core';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { FormInputComponent } from '../form-input/form-input.component';
+import { FormsModule } from '@angular/forms';
 import { Quote } from '../quote';
 
 @Component({
@@ -9,25 +10,29 @@ import { Quote } from '../quote';
   styleUrls: ['./quote-display.component.css']
 })
 export class QuoteDisplayComponent implements OnInit {
+  quote!: Quote;
 
   constructor() {}
 
 
 
   quotes: Quote[] = [
-    new Quote('Brian Njoroge','Nelson Mandela','Freedom is a highway'),
-    new Quote('Alex Letto', 'Jomo Kenyatta','We will prevail'),
+    new Quote(1,'Brian Njoroge','Nelson Mandela','Freedom is a highway','Justice',new Date(2022,7,2),0,0),
+    new Quote(2,'Alex Letto', 'Jomo Kenyatta','We will prevail','Freedom',new Date(2022,7,2),0,0),
   ];
   
-  revealQuote(index: number | number){
-    this.quotes[index].showQuote = !this.quotes[index].showQuote;
+  addNewQuote(quote: Quote) {
+    
+   
 
+
+    this.quotes.push(quote)
   }
-  remove(deleteQuote: any, index: number) {
-      if(deleteQuote) {
-        this.quotes.splice(index, 1);
-      }
-  }
+
+  @Output() isComplete = new EventEmitter<boolean>();
+
+
+
 
   ngOnInit(): void {
   }
