@@ -54,3 +54,8 @@ p img {
 #expand {
     float: right;
 }
+#likestop {
+    margin-left: 120px;
+    color: #4093a4;
+    float: right;
+}

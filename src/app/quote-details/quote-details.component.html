@@ -1,6 +1,9 @@
 <h6 class="card-subtitle mb-2 text-muted"> - {{quote.author}} <span id="dura">Posted: {{quote.datePosted|timelapse}} days ago.</span> </h6>
-<!-- <div class="container-fluid" id="buttons">
-  <button class="btn btn-sm btn-success" (click)='upvote()'>{{quoty.likes}} <i class="fa fa-thumbs-up" id="like"></i></button> 
-  <button class="btn btn-sm hate" id="hate" (click)='downvote()'>{{quoty.dislikes}} <i class="fa fa-thumbs-down" id="dislike"></i></button> 
-  <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button> 
-</div> -->
+<div class="container-fluid" id="buttons">
+    
+    <a  id="like" (click)='thumbsUp()'> <mat-icon>thumb_up</mat-icon>{{quote.likes}} </a>
+    <a id="dislike" (click)='thumbsDown()'> <mat-icon>thumb_down</mat-icon>{{quote.dislike}} </a>
+
+    <button mat-raised-button color="warn">Warn</button>
+  <!-- <button class="btn btn-sm btn-danger" id="del" (click)='deleteQuote(true)'><i class="fa fa-trash" id="delete"></i></button>  -->
+</div>

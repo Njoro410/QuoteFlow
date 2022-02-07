@@ -12,6 +12,12 @@ export class QuoteDetailsComponent implements OnInit {
 
   constructor() { }
 
+    thumbsUp() {
+      this.quote.likes = this.quote.likes+1;
+    }
+    thumbsDown() {
+      this.quote.dislike = this.quote.dislike-1;
+    }
 
 
   ngOnInit(): void {

@@ -13,3 +13,14 @@
     margin-left: 10px;
     background-color: #444;
 }
+#like {
+    cursor: default;
+    color: #4093a4;
+}
+#dislike {
+    cursor: default;
+    color: #444;
+}
+#dura {
+    float: right;
+}
