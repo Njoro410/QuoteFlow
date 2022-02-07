@@ -14,6 +14,10 @@
       <div class="modal-body">
         <form #quoteForm = 'ngForm' (ngSubmit)='submitQuote()'>
           <mat-form-field appearance="outline">
+            <mat-label>Category</mat-label>
+            <input matInput placeholder="Your Name" id="name" [(ngModel)]="newQuote.category" name="category" #name='ngModel'>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
             <mat-label>name</mat-label>
             <input matInput placeholder="Your Name" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'>
           </mat-form-field>

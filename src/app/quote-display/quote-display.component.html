@@ -1,40 +1,39 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="../assets/logo/logo.png" alt="logo" width="50%" height="auto"
-                class="d-inline-block align-text-top"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link " aria-current="page" href="#"><strong>Help</strong></a>
-                <a class="nav-link " aria-current="page" href="#"><strong>Contact</strong></a>
-            </div>
-        </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/logo/logo.png" alt="logo" width="50%" height="auto" class="d-inline-block align-text-top"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link " aria-current="page" href="#"><strong>Help</strong></a>
+        <a class="nav-link " aria-current="page" href="#"><strong>Contact</strong></a>
+      </div>
     </div>
+  </div>
 </nav>
 <!-- Start of quote information-->
 <br>
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12">
-            <p>As the famous words of <span id="name">Bruce Coville</span> tell us:</p>
-            <blockquote cite="https://www.huxley.net/bnw/four.html">
-                <p>Withholding information is the essence of tyranny. Control of the flow of information is the tool
-                    of the dictatorship.</p>
-            </blockquote>
-            <p>And as by these wise words, we at <img src="../assets/logo/logo.png"> strive to offer a platform to share
-                motivational quotes to help in uplifting people's lives everyday.</p>
-            <p id="CTO">We encourage motivational and inspirational quotes and it can be an original or not. Share a
-                QuoteFlow</p>
-        </div>
-        <div class="col-sm-12" id="btnq">
-            <app-form-input (addQuote)="addNewQuote($event)"></app-form-input>
-        </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <p>As the famous words of <span id="name">Bruce Coville</span> tell us:</p>
+      <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Withholding information is the essence of tyranny. Control of the flow of information is the tool
+          of the dictatorship.</p>
+      </blockquote>
+      <p>And as by these wise words, we at <img src="../assets/logo/logo.png"> strive to offer a platform to share
+        motivational quotes to help in uplifting people's lives everyday.</p>
+      <p id="CTO">We encourage motivational and inspirational quotes and it can be an original or not. Share a
+        QuoteFlow</p>
     </div>
-    <hr>
+    <div class="col-sm-12" id="btnq">
+      <app-form-input (addQuote)="addNewQuote($event)"></app-form-input>
+    </div>
+  </div>
+  <hr>
 </div>
 
 
@@ -54,33 +53,33 @@
 <div class="container">
 
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div *ngFor="let quote of quotes let i= index"  style="width: 24rem;"  >
-        <div class="col">
-          <div class="card">
-            <div class="card-header">
-                {{quote.category}}
-              </div>
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    {{quote.q}}
-                    
-                    <footer class="blockquote-footer">{{quote.author}}</footer>
-                  </blockquote>
-            </div>
-            <div class="card-footer">
-              <span>Posted by:{{quote.name}}</span>
-            </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let quote of quotes let i= index" style="width: 24rem;">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            {{quote.category}} <span id="expand"><button (click)='displayInfo(i)' class="btn btn-primary">Expand</button></span>
+          </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              {{quote.q}}
+
+              <footer class="blockquote-footer"><app-quote-details [quote]='quote' *ngIf='quote.showAuthor'></app-quote-details></footer>
+            </blockquote>
+          </div>
+          <div class="card-footer">
+            <span>Posted by:{{quote.name}}</span>
           </div>
         </div>
+      </div>
 
 
-        </div>
-        </div>
+    </div>
+  </div>
 
-       
-       
-         <!-- <div class="card-deck">
+
+
+  <!-- <div class="card-deck">
             <div *ngFor="let quote of quotes let i= index" class="card" style="width: 24rem;" >
               <div class="card-body">
                 <h5 class="card-title center">The Quote, posted by:{{quote.name}}</h5>
@@ -97,8 +96,8 @@
 
 
 
-         
-        <!-- <div class="all-cards">
+
+  <!-- <div class="all-cards">
             <div *ngFor="let quote of quotes let i= index" class="card" style="width: 24rem;"  >
               <div class="card-body">
                 <h4 class="card-title" appHighlightQoute >{{quote.name}}<button  class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
@@ -110,10 +109,8 @@
             </div>
           </div> 
            -->
-    
-  
+
+
 
 
 </div>
-
-

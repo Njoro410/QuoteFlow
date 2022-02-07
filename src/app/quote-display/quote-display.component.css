@@ -51,11 +51,6 @@ p img {
     background-color: #78d9ec;
     
 }
-@media (min-width:768px) {
-    .card-deck > .card
-    {
-        width: 29%;
-        flex-wrap: wrap;
-        flex: initial; 
-    }
+#expand {
+    float: right;
 }

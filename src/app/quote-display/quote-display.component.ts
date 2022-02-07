@@ -22,15 +22,14 @@ export class QuoteDisplayComponent implements OnInit {
   ];
   
   addNewQuote(quote: Quote) {
-    
-   
-
 
     this.quotes.push(quote)
   }
 
   @Output() isComplete = new EventEmitter<boolean>();
-
+  displayInfo(index:any) {
+    this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+  }
 
 
 
