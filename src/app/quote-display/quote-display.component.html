@@ -58,17 +58,20 @@
       <div class="col">
         <div class="card">
           <div class="card-header">
-            {{quote.category}} <span id="expand"><button (click)='displayInfo(i)' class="btn btn-primary">Expand</button></span>
+            {{quote.category}} <span id="expand"><button (click)='displayInfo(i)'
+                class="btn btn-primary">Expand</button></span>
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
               {{quote.q}}
 
-              <footer class="blockquote-footer"><app-quote-details [quote]='quote' *ngIf='quote.showAuthor'></app-quote-details></footer>
+              <footer class="blockquote-footer">
+                <app-quote-details [quote]='quote' *ngIf='quote.showAuthor'></app-quote-details>
+              </footer>
             </blockquote>
           </div>
           <div class="card-footer">
-            <span>Posted by:{{quote.name}}</span>
+            <span>Posted by:{{quote.name}} on {{quote.datePosted|date}}</span>
           </div>
         </div>
       </div>

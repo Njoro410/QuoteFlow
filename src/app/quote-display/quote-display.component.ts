@@ -17,11 +17,14 @@ export class QuoteDisplayComponent implements OnInit {
 
 
   quotes: Quote[] = [
-    new Quote(1,'Brian Njoroge','Nelson Mandela','Freedom is a highway','Justice',new Date(2022,7,2),0,0),
+    new Quote(1,'Brian Njoroge','Nelson Mandela','Freedom is a highway','Justice',new Date(2022,2,6),0,0),
     new Quote(2,'Alex Letto', 'Jomo Kenyatta','We will prevail','Freedom',new Date(2022,7,2),0,0),
   ];
   
   addNewQuote(quote: Quote) {
+    let arraySize = this.quotes.length;
+    quote.id = arraySize+1;
+    quote.datePosted = new Date(quote.datePosted)
 
     this.quotes.push(quote)
   }
