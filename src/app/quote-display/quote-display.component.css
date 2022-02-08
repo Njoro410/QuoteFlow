@@ -8,22 +8,23 @@
 .nav-link:hover {
     color: aqua;
 }
+#header {
+    text-align: center;
+    font-weight: bolder;
+}
+#top {
+    color: #4093a4;
+}
 #name {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     color: #4093a4;
     text-decoration: none;
 }
-/* blockquote {
-    margin: 0;
+#home {
+    font-weight: 800;
+    font-size: large;
 }
-
-blockquote p {
-    font-family: 'Lobster', cursive;
-    padding: 15px;
-    background: #eee;
-    border-radius: 5px;
-} */
 blockquote p {
     text-align: justify;
 }
@@ -80,4 +81,9 @@ p img {
     }
 .card-header, .card-footer {
     background: white;
+}
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

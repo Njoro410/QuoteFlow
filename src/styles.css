@@ -1,17 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import 'animate.css';
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 html, body { height: 100%; }
 body { 
     margin: 0; 
-    font-family: 'Berkshire Swash', cursive; 
+    font-family: 'Patrick Hand', cursive;
     overflow-x: hidden;
+    background-image: url(./assets/alternating-arrowhead.svg);
+    font-weight: 20px;
     }
-    mat-dialog-container {
-        background: #444 !important;
-        
-     }
+   

@@ -1,7 +1,5 @@
 export class Quote {
-  splice(index: number, arg1: number) {
-    throw new Error('Method not implemented.');
-  }
+
   showAuthor: boolean;
   constructor ( 
     public id:number,

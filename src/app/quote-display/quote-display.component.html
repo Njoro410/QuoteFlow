@@ -19,6 +19,14 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
+      <h1 id="header"><span id="top">INSPIRATIONAL</span> AND <span id="top">MOTIVATIONAL</span> QUOTES</h1>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container" id="home">
+  <div class="row">
+    <div class="col-sm-12">
       <p>As the famous words of <span id="name">Bruce Coville</span> tell us:</p>
       <blockquote cite="https://www.huxley.net/bnw/four.html">
         <p>Withholding information is the essence of tyranny. Control of the flow of information is the tool
@@ -34,7 +42,7 @@
     </div>
   </div>
   <hr>
-</div>
+
 
 
 
@@ -45,9 +53,9 @@
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div *ngFor="let quote of quotes let i= index">
       <div class="col">
-        <div class="card">
+        <div appQuoteHighlight class="card">
           <div class="card-header">
-            {{quote.category|uppercase}}<span id="expand"><button id="drop" (click)="showMore(i)" mat-mini-fab
+            <span id="top">{{quote.category|uppercase}}</span><span id="expand"><button id="drop" (click)="showMore(i)" mat-mini-fab
                 color="accent">
                 <mat-icon>arrow_drop_down</mat-icon>
               </button></span>
@@ -65,7 +73,7 @@
             </blockquote>
           </div>
           <div class="card-footer">
-            <span>By:{{quote.name}} on {{quote.datePosted|date}}</span>
+            <span>By:<span id="top">{{quote.name}}</span> on <span id="top">{{quote.datePosted|date}}</span></span>
             <button mat-raised-button color="warn" id="delete" (click)="deleteQuote(i)">
               <mat-icon>delete_forever</mat-icon>
             </button>
@@ -75,3 +83,14 @@
     </div>
   </div>
 </div>
+</div>
+<hr>
+<div class="container-fluid">
+  <div class="row" id="footer">
+    <div class="col-sm-12" id="footer" >
+      <img src="../../assets/logo/logo.png" alt="">
+    </div>
+    QuoteFlow 2022 | All rights reserved
+  </div>
+</div>
+

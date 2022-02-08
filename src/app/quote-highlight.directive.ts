@@ -1,4 +1,4 @@
-import { Directive,ElementRef } from '@angular/core';
+import { Directive,ElementRef, HostListener,Input } from '@angular/core';
 import { Quote } from './quote';
 
 @Directive({
@@ -6,12 +6,16 @@ import { Quote } from './quote';
 })
 export class QuoteHighlightDirective {
 
-    quote!: Quote
-  constructor(private elem:ElementRef) { 
-    if(this.quote.likes>50) {
-      this.elem.nativeElement.style.textDecoration='line-through';
-    }
+  @Input() quote!: Quote;
+  constructor(private elem:ElementRef) {} 
+
+
+  
+
+  private mostLiked(like:number) {
+    this.elem.nativeElement.style.boxShadow = like;
+  }
     
   }
 
-}
+

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit,Output,EventEmitter } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { QuoteHighlightDirective } from '../quote-highlight.directive';
 
 import { Quote } from '../quote';
 
@@ -13,7 +13,7 @@ import { Quote } from '../quote';
 export class QuoteDisplayComponent implements OnInit {
   quote!: Quote;
 
-  constructor(public dialog:MatDialog) {}
+  constructor() {}
 
 
 
@@ -48,5 +48,6 @@ export class QuoteDisplayComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
 
 }
