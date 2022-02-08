@@ -58,8 +58,7 @@
       <div class="col">
         <div class="card">
           <div class="card-header">
-            {{quote.category|uppercase}}  <span id="expand"><button (click)='displayInfo(i)'
-                class="btn btn-primary">Expand</button></span>
+            {{quote.category|uppercase}} <span id="expand"><button (click)="showMore(i)" mat-raised-button color="accent"><mat-icon>arrow_drop_down</mat-icon></button></span>
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
@@ -71,7 +70,8 @@
             </blockquote>
           </div>
           <div class="card-footer">
-            <span>By:{{quote.name}} on {{quote.datePosted|date}}</span><span id="likestop"> <mat-icon>thumb_up</mat-icon>{{quote.likes}}</span>
+            <span>By:{{quote.name}} on {{quote.datePosted|date}}</span>
+            <button mat-raised-button color="warn" id="delete" (click)="deleteQuote(  i)"><mat-icon>delete_forever</mat-icon></button>
           </div>
         </div>
       </div>

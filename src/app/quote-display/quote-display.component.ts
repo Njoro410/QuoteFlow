@@ -17,7 +17,7 @@ export class QuoteDisplayComponent implements OnInit {
 
 
   quotes: Quote[] = [
-    new Quote(1,'Brian Njoroge','Nelson Mandela','Freedom is a highway','Justice',new Date(2022,2,6),0,0),
+    new Quote(1,'Brian Njoroge','Nelson Mandela','Freedom is a highway','Justice',new Date(2021,2,6),0,0),
     new Quote(2,'Alex Letto', 'Jomo Kenyatta','We will prevail','Freedom',new Date(2022,7,2),0,0),
   ];
   
@@ -29,8 +29,15 @@ export class QuoteDisplayComponent implements OnInit {
     this.quotes.push(quote)
   }
 
+  deleteQuote(index:number) {
+        let toDelete = confirm(`Are you sure you want to delete this Quote?`)
+        if(toDelete){
+          this.quotes.splice(index,1);
+        }
+  }
+
   @Output() isComplete = new EventEmitter<boolean>();
-  displayInfo(index:any) {
+  showMore(index:any) {
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
   }
 
