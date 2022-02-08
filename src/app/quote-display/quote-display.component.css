@@ -14,7 +14,7 @@
     color: #4093a4;
     text-decoration: none;
 }
-blockquote {
+/* blockquote {
     margin: 0;
 }
 
@@ -23,6 +23,9 @@ blockquote p {
     padding: 15px;
     background: #eee;
     border-radius: 5px;
+} */
+blockquote p {
+    text-align: justify;
 }
 
 blockquote p::before {
@@ -54,11 +57,18 @@ p img {
 #expand {
     float: right;
 }
+#drop {
+    background-color: #4093a4;
+
+}
 #likestop {
     margin-left: 120px;
     color: #4093a4;
     float: right;
 }
 #delete {
+    float: right;
+}
+#badge {
     float: right;
 }

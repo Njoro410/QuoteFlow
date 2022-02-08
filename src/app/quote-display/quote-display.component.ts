@@ -1,8 +1,9 @@
 import { Component, Input, OnInit,Output,EventEmitter } from '@angular/core';
-import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { FormInputComponent } from '../form-input/form-input.component';
-import { FormsModule } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+
 import { Quote } from '../quote';
+
+
 
 @Component({
   selector: 'app-quote-display',
@@ -12,13 +13,13 @@ import { Quote } from '../quote';
 export class QuoteDisplayComponent implements OnInit {
   quote!: Quote;
 
-  constructor() {}
+  constructor(public dialog:MatDialog) {}
 
 
 
   quotes: Quote[] = [
-    new Quote(1,'Brian Njoroge','Nelson Mandela','Freedom is a highway','Justice',new Date(2021,2,6),0,0),
-    new Quote(2,'Alex Letto', 'Jomo Kenyatta','We will prevail','Freedom',new Date(2022,7,2),0,0),
+    new Quote(1,'Brian Njoroge','Nelson Mandela','Freedom is a highway','Justice',new Date(2019,7,12),8,0),
+    new Quote(2,'Alex Letto', 'Jomo Kenyatta','We will prevail','Freedom',new Date(2022,7,2),2,0),
   ];
   
   addNewQuote(quote: Quote) {
@@ -30,13 +31,15 @@ export class QuoteDisplayComponent implements OnInit {
   }
 
   deleteQuote(index:number) {
-        let toDelete = confirm(`Are you sure you want to delete this Quote?`)
-        if(toDelete){
-          this.quotes.splice(index,1);
-        }
+          this.quotes.splice(index,1);      
+  }
+  openDialog() {
+    this.openDialog
   }
 
-  @Output() isComplete = new EventEmitter<boolean>();
+
+
+  
   showMore(index:any) {
     this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
   }
