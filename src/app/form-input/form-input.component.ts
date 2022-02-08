@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup, NgForm } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
 import { Quote } from '../quote';
 
 @Component({
@@ -8,6 +8,15 @@ import { Quote } from '../quote';
   styleUrls: ['./form-input.component.css']
 })
 export class FormInputComponent implements OnInit {
+
+cat = new FormControl('',[Validators.required])
+name = new FormControl('',[Validators.required])
+author = new FormControl('',[Validators.required])
+quote = new FormControl('',[Validators.required])
+ 
+
+
+  
 
   
   newQuote = new Quote(0,"","","","",new Date(),0,0);

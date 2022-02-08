@@ -16,7 +16,7 @@ export class QuoteDetailsComponent implements OnInit {
       this.quote.likes = this.quote.likes+1;
     }
     thumbsDown() {
-      this.quote.dislike = this.quote.dislike-1;
+      this.quote.dislike = this.quote.dislike+1;
     }
 
 

@@ -1,9 +1,6 @@
-h1 {
-    font-family: 'Berkshire Swash', cursive; 
-    text-align: center;
-}
 mat-form-field {
     width: 100%;
+    color: #fff;
     
 }
 .modal-body, .modal-header, .modal-footer { background-color:#444; }
@@ -19,4 +16,8 @@ mat-form-field {
 }
 #share:hover{
     background-color: #7cdcf0;
+}
+#activateMessage {
+    font-weight:100;
+    float: right;
 }
