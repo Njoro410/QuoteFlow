@@ -58,7 +58,7 @@
       <div class="col">
         <div class="card">
           <div class="card-header">
-            {{quote.category|uppercase}} <span id="expand"><button (click)="showMore(i)" mat-raised-button color="accent"><mat-icon>arrow_drop_down</mat-icon></button></span>
+            {{quote.category|uppercase}}<span matBadge="{{quote.likes}}" matBadgeSize="small">Likes</span> <span id="expand"><button (click)="showMore(i)" mat-raised-button color="accent"><mat-icon>arrow_drop_down</mat-icon></button></span>
           </div>
           <div class="card-body">
             <blockquote class="blockquote mb-0">
