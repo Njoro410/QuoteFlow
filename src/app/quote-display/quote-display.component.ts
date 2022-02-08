@@ -18,9 +18,9 @@ export class QuoteDisplayComponent implements OnInit {
 
 
   quotes: Quote[] = [
-    new Quote(1,'Cynthia','Nelson Mandela','Freedom is a highway','Justice',new Date(2020,7,12),0,0),
-    new Quote(2,'John', 'Jomo Kenyatta','We will prevail','Independence',new Date(2021,7,2),0,0),
-    new Quote(3,'Pete','Martin Luther','bla bla bla bla bla','Racism',new Date(2022,0,20),0,0)
+    new Quote(1,'Cynthia','Lao Tzu','The journey of a thousand miles begins with one step.','Motivation',new Date(2020,7,12),0,0),
+    new Quote(2,'John', 'Friedrich Nietzsche','That which does not kill us makes us stronger.','Inspiration',new Date(2021,7,2),0,0),
+    new Quote(3,'Pete','John Lennon','Life is what happens when you’re busy making other plans.','Life',new Date(2022,0,20),0,0)
   ];
   
   addNewQuote(quote: Quote) {
