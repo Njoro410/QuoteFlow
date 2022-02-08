@@ -7,13 +7,19 @@ import { Quote } from './quote';
 export class QuoteHighlightDirective {
 
   @Input() quote!: Quote;
+  
   constructor(private elem:ElementRef) {} 
 
+  @HostListener ("click") onClick() {
+    for (var i = 0;i<=this.quote.id;i++) {
+    this.mostLiked("underline")
+    }
+  }
 
   
 
-  private mostLiked(like:number) {
-    this.elem.nativeElement.style.boxShadow = like;
+  private mostLiked(like:string) {
+    this.elem.nativeElement.style.textDecoration = like;
   }
     
   }
