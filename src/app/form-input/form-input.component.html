@@ -14,7 +14,7 @@
       </div>
       <div class="modal-body">
         <form #quoteForm='ngForm' (ngSubmit)='submitQuote()'>
-          <mat-form-field appearance="legacy">
+          <mat-form-field appearance="outline">
             <mat-label>Category</mat-label>
             <input matInput placeholder="Category" id="cat" [(ngModel)]="newQuote.category" name="cat" #cat='ngModel'
               required>
@@ -24,7 +24,7 @@
 
           </mat-form-field>
 
-          <mat-form-field appearance="legacy">
+          <mat-form-field appearance="outline">
             <mat-label>name</mat-label>
             <input matInput placeholder="Your Name" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel'
               required>
@@ -33,7 +33,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field appearance="legacy">
+          <mat-form-field appearance="outline">
             <mat-label>author</mat-label>
             <input matInput placeholder="Quote Author" id="author" [(ngModel)]="newQuote.author" name="author"
               #author='ngModel' required>
@@ -42,7 +42,7 @@
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field appearance="legacy">
+          <mat-form-field appearance="outline">
             <mat-label>quote</mat-label>
             <textarea matInput placeholder="enter quote here" id="quote" [(ngModel)]="newQuote.q" name="quote"
               #quote='ngModel' required></textarea>
